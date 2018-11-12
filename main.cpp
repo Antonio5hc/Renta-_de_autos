@@ -1,3 +1,6 @@
+//Programa Hecho Por Herberth Antonio Portillo Cruz
+//Carnet PC18022
+
 #include <iostream>//libreria principal para entradas y salidas
 #include <windows.h>//libreria para usar system pause, color etc
 #include <stdlib.h>//para control de procesos
@@ -6,6 +9,7 @@
 
 using namespace std;
 
+//Declaracion te todas las funciones usadas en el programa
 int renta();
 int sedanes();
 int camionetas();
@@ -21,6 +25,7 @@ void mostclientes();
 int addcliente();
 int Menu();
 
+//Estructura Para Guardar Clientes
 struct clientes{
    char nombre[50];
    char apellido[50];
@@ -29,6 +34,7 @@ struct clientes{
 
 }cliente;
 
+//funcion que pregunta al usuario la accion a realizar
 void verlis()
 {
     int opcion;
@@ -60,25 +66,25 @@ void verlis()
     }
 
 
-
+//Funcion para agregar usuarios con ayuda de la estructura
 int addcliente()
 {
-    int casos;
+    int casos;//variable que servira para el switch
     cout << "Ingrese Los Datos: " << endl;
-    cin.getline(cliente.nombre,50,'\n');
+    cin.getline(cliente.nombre,50,'\n');//guarda en memoria los datos almacenados por el usuario
 
     cout << "\nIngrese el Nombre Completo: " << endl;
-    cin.getline(cliente.apellido,50,'\n');
+    cin.getline(cliente.apellido,50,'\n');//guarda en memoria los datos almacenados por el usuario
 
     cout << "\nIngrese El numero de Dui: " << endl;
-    cin>>cliente.dui;
+    cin>>cliente.dui;//guarda en memoria los datos almacenados por el usuario
 
     cout << "\nIngrese el numero de celular: " << endl;
-    cin>>cliente.celu;
+    cin>>cliente.celu;//guarda en memoria los datos almacenados por el usuario
 
-    system ("cls");
+    system ("cls");//para limpiar pantalla
 
-    cout<<"desea ver el cliente agregado?"<<endl;
+    cout<<"desea ver el cliente agregado?"<<endl;//para dirigirse a otra pantalla
     cout <<"1-SI   2-No"<<endl;
     cin>>casos;
 
@@ -99,7 +105,7 @@ int addcliente()
 
 
 }
-
+//funcion que muestra los clientes actuales
 void mostclientes()
 {
     cout<<"\nNombre: Jose Mauricio Cruz "<<endl;
@@ -167,6 +173,8 @@ void mostclientes()
 
       default:
         cout<<"La opcion no esta disponible"<<endl;
+        renta();
+        break;
 
 
 
@@ -176,7 +184,7 @@ void mostclientes()
  }
 
 
-
+//menu principal en el programa
 int Menu()
 {
     int opciones;
@@ -234,11 +242,11 @@ default:
 
 }
 
-
+//funcion main y principal para que le programa funcione
 int main()
 {
 
-    system("color 5E");
+    system("color 5E");//para cambiar el color de la consola
 
     cout<<"                          ***********************************************"<<endl;
     cout<<"                          ****   BIENVENIDOS A RENT A CAR PORTILLO  ****"<<endl;
@@ -253,6 +261,7 @@ int main()
     return 0;
 }
 
+//funcion para mostrar los autos disponibles
 int sedanes()
 {
     int opcion;
@@ -293,6 +302,7 @@ int sedanes()
 
 }
 
+//funcion para mostrar los autos disponibles
 int todoterreno()
 {
     int opcion;
@@ -331,6 +341,7 @@ int todoterreno()
 
 }
 
+//funcion para mostrar los autos disponibles
 int camionetas()
 {
     int opcion;
@@ -370,7 +381,7 @@ int camionetas()
 }
 
 
-
+//funcion para mostrar detalles del auto
 int corolla()
 {
    int opcion;
@@ -421,6 +432,7 @@ int corolla()
 
 }
 
+//funcion para mostrar detalles del auto
 int hilux()
 {
    int opcion;
@@ -467,6 +479,7 @@ int hilux()
 
 }
 
+//funcion para mostrar detalles del auto
 int lancer()
 {
    int opcion;
@@ -512,6 +525,7 @@ int lancer()
 
 }
 
+//funcion para mostrar detalles del auto
 int ford()
 {
    int opcion;
@@ -559,7 +573,7 @@ int ford()
 }
 
 
-
+//funcion para mostrar los tipos de vehiculos disponibles
 int modecar()
 {
 	int opcion;
