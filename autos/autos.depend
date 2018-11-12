@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1542041904 source:c:\users\herberth\desktop\renta de autos\autos\main.cpp
+	<iostream>
+	<windows.h>
+	<stdlib.h>
+	<conio.h>
+
